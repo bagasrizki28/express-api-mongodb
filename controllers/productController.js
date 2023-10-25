@@ -2,13 +2,13 @@ import Product from "../models/productModel.js";
 
 //Get All Product
 export async function getAllProduct(req, res) {
-    try {
-      const product = await Product.find({});
-      res.status(200).json(product);
-    } catch (error) {
-      res.status(500).json({ message: error.message });
-    }
-  };
+  try {
+    const product = await Product.find({});
+    res.status(200).json(product);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+}
 
 //Get Product By Id
 export async function getProductById(req, res) {

@@ -4,7 +4,7 @@ import {
   getAllProduct,
   getProductById,
   updateProduct,
-} from "./controllers/productController.js";
+} from "../controllers/productController.js";
 
 const route = express();
 
@@ -24,6 +24,5 @@ route.post("/products", addProduct);
 //Update Data
 route.put("/products/:id", updateProduct);
 
-route.listen(3000, () => {
-  console.log("Server is running on port 3000.");
-});
+
+export default route;
